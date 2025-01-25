@@ -3,6 +3,7 @@ import {
   Container,
   Divider,
   Grid,
+  IconButton,
   Stack,
   Typography,
 } from "@mui/material";
@@ -10,6 +11,9 @@ import React, { Fragment } from "react";
 import ImageBox from "./ImageBox";
 import logoImg from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
 
 const routesArray = [
   {
@@ -42,7 +46,7 @@ export default function Footer() {
           <Grid
             item
             xs={12}
-            lg={3}
+            lg={2}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             <ImageBox src={logoImg} sx={{ width: "100%", maxWidth: "300px" }} />
@@ -50,7 +54,7 @@ export default function Footer() {
           <Grid
             item
             xs={12}
-            lg={6}
+            lg={7}
             sx={{ height: "auto", my: { md: 4, lg: 0 } }}
           >
             <Grid
@@ -65,10 +69,10 @@ export default function Footer() {
             >
               {routesArray.map((route, index) => (
                 <Fragment key={index}>
-                  <Grid item xs={12} md={2.3}>
+                  <Grid item xs={12} md={2.2}>
                     <Link
                       to={route.path}
-                      sx={{
+                      style={{
                         textDecoration: "none",
                         color: "white",
                         "&:hover": {
@@ -102,13 +106,14 @@ export default function Footer() {
                       sx={{
                         display: { xs: "none", md: "block" },
                         height: "100%",
+                        maxHeight: "100px",
                       }}
                     >
                       <Divider
                         orientation="vertical"
                         sx={{
                           height: "100%",
-                          borderWidth: 2,
+                          borderWidth: 1,
                           borderColor: "#ffffff",
                         }}
                       />
@@ -142,32 +147,38 @@ export default function Footer() {
             item
             xs={12}
             lg={3}
-            sx={{ display: "flex", justifyContent: "center" }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             <Stack
               direction="row"
               spacing={2}
-              sx={{ display: "flex", justifyContent: "center" }}
+              sx={{ justifyContent: "center" }}
             >
-              <Typography
-                variant="body1"
-                color="white"
-                sx={{ display: { xs: "none", lg: "block" } }}
+              <IconButton
+                sx={{ bgcolor: "transparent" }}
+                href="https://www.facebook.com/"
+                target="_blank"
               >
-                Siguenos en nuestras redes sociales
-              </Typography>
-              <ImageBox
-                src="https://img.icons8.com/color/48/000000/facebook.png"
-                alt="Facebook"
-              />
-              <ImageBox
-                src="https://img.icons8.com/color/48/000000/instagram-new--v1.png"
-                alt="Instagram"
-              />
-              <ImageBox
-                src="https://img.icons8.com/color/48/000000/twitter--v1.png"
-                alt="Twitter"
-              />
+                <FacebookIcon fontSize="large" sx={{ color: "#ffffff" }} />
+              </IconButton>
+              <IconButton
+                sx={{ bgcolor: "transparent" }}
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
+                <InstagramIcon fontSize="large" sx={{ color: "#ffffff" }} />
+              </IconButton>
+              <IconButton
+                sx={{ bgcolor: "transparent" }}
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
+                <XIcon fontSize="large" sx={{ color: "#ffffff" }} />
+              </IconButton>
             </Stack>
           </Grid>
         </Grid>

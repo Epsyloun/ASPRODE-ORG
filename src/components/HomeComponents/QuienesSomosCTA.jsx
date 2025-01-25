@@ -14,7 +14,7 @@ export default function QuienesSomosCTA() {
         spacing={2}
         my={2}
         sx={{
-          minHeight: "90vh",
+          minHeight: "90svh",
           height: "auto",
           maxHeight: "auto",
           justifyContent: "center",
@@ -35,8 +35,10 @@ export default function QuienesSomosCTA() {
             src={quienesSomosCTA}
             alt="Quiénes somos"
             sx={{
-              width: { xs: "50%", lg: "80%" },
-              height: "auto",
+              width: "auto",
+              maxWidth: "500px",
+              objectFit: "cover",
+              height: "100%",
               borderRadius: "10px",
             }}
           />

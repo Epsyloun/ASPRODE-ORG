@@ -5,7 +5,16 @@ import ImageBox from "../genericComponents/ImageBox";
 
 export default function ProyectosCTA() {
   return (
-    <Box my={4} bgcolor={"primary.main"}>
+    <Box
+      my={4}
+      bgcolor={"primary.main"}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "90svh",
+      }}
+    >
       <Container>
         <Grid container spacing={4} py={4} justifyContent={"center"}>
           <Grid item xs={12}>

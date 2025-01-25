@@ -17,6 +17,7 @@ import ImageBox from "../genericComponents/ImageBox";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import useNavBarSpacing from "../../hooks/useNavBarSpacing";
+import ChipComponent from "../genericComponents/ChipComponent";
 
 export default function HeroBanner() {
   const heightWindow = useNavBarSpacing();
@@ -91,16 +92,7 @@ export default function HeroBanner() {
                 sx={{ width: "100%" }}
                 spacing={2}
               >
-                <Chip
-                  icon={<WavingHandIcon sx={{ color: "#ef7230 !important" }} />}
-                  label="Bienvenido a nuestra ONG"
-                  color="white"
-                  sx={{
-                    color: "white.main",
-                    bgcolor: "rgba(255, 255, 255, 0.3)",
-                    fontSize: "1rem",
-                  }}
-                />
+                <ChipComponent />
 
                 <Typography variant="h3" color={"white"} fontWeight={"bold"}>
                   Bienvenido a ASPRODE

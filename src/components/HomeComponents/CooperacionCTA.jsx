@@ -40,7 +40,16 @@ export default function CooperacionCTA() {
   }, [images]);
 
   return (
-    <Stack my={4}>
+    <Stack
+      my={4}
+      sx={{
+        display: "flex",
+        minHeight: "80svh",
+        alignItems: "center",
+        justifyContent: "center",
+        overflowX: "hidden",
+      }}
+    >
       <Typography
         variant="h3"
         fontWeight="bold"
@@ -51,6 +60,7 @@ export default function CooperacionCTA() {
         Cooperación
       </Typography>
       <Box
+        mt={2}
         sx={{
           overflowX: "hidden",
         }}

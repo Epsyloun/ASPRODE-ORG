@@ -56,10 +56,12 @@ export default function Navbar() {
                 sx={{
                   height: scrollPosition > 20 ? "50px" : "100px", // Tamaño del logo
                   width: "auto",
-                  transition: "0.5s ease-out", // Transición suave
+                  transition: "0.25s ease-out", // Transición suave
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: "pointer",
+                  "&:hover": { bgcolor: "#00000010", borderRadius: "10%" },
                 }}
                 onClick={() => {
                   if (location.pathname !== "/") {

@@ -10,7 +10,7 @@ export default function ContactanosCTA() {
         container
         spacing={2}
         sx={{
-          minHeight: "90vh",
+          minHeight: "90svh",
           justifyContent: "center",
           alignItems: "center",
         }}
